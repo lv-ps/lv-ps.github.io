@@ -1,0 +1,423 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  position: relative;
+  background-image: url("background.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width : 100%;
+  background: rgba(0, 0, 0, 0);
+}
+
+
+.about {
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 33%;
+}
+
+.cardA {
+  width: 305px;
+  height: 505px;
+  background-color: rgba(230, 230, 250, 0.2);
+  border: 3px solid #5433FF;
+  border-radius: 40px;
+  box-shadow: rgb(67, 228, 255) 0px 19px 38px, rgba(138, 197, 248, 1) 0px 15px 12px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.logo {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  bottom: 6%;
+}
+
+.isi_about {
+  text-align: justify;
+  text-justify: newspaper;
+  margin: 11px;
+}
+
+.Welcome h1 {
+  margin-top: 17px;
+  color: #58CEF5;
+  font-size: 43px;
+  text-shadow: 2px 4px 3px rgba(77, 97, 255, 1);
+}
+
+.project {
+  color: white;
+  text-align: center;
+}
+
+.card {
+  margin: 0 auto;
+  background-color: black;
+}
+
+.card-text {
+  text-align: justify;
+  text-justify: newspaper;
+}
+
+h3,
+h1 {
+  color: white;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+.card-title {
+  color: #69696a;
+}
+
+
+.wrapper {
+  padding-left: 20px;
+  border-radius: 7px;
+  margin-left: 10px;
+}
+
+.buttonQR {
+  margin-top: 9px;
+  border-radius: 5px;
+  border: solid 1px;
+  padding: 5px;
+  background-color: lightgrey;
+}
+
+.input {
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.qr-code {
+  margin-top: 1em;
+}
+
+.contact {
+  text-align: center;
+}
+
+.button {
+  position: relative;
+  width: 70px;
+  height: 30px;
+  font-size: 20px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: width .5s, border-radius .5s;
+}
+
+.button * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 1.5s;
+}
+
+.terkirim {
+  opacity: 0;
+  color: white;
+  font-style: bold;
+}
+
+.button:focus {
+  width: 130px;
+  border-radius: 5px;
+  background-color: #96c93d;
+}
+
+.button:focus .send {
+  font-style: bold;
+  opacity: 0;
+}
+
+.button:focus .terkirim {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 16rem;	
+  text-align: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+input {
+  padding: 1.4rem;
+  border: 2px solid #3548f4;
+  color: #11de40;
+  background-color: rgba(50, 67, 223, 1);
+  border-radius: 10px;
+  border-color: white;
+}
+
+::placeholder {
+  color: rgba(220, 227, 151, 0.39);
+}
+
+.navbar-toggler {
+  color: #5433FF;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.navbar-toggler-icon {
+  font-size: 20px;
+}
+
+.icon {
+  font-size: 30px;
+  display: inline-flex;
+}
+
+i {
+  padding: 10px;
+}
+
+.animate-text {
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.animate-text,
+span {
+  font-size: 40px;
+  color: whitesmoke;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 46px;
+  display: none;
+}
+
+.animate-text,
+span.text-in {
+  display: block;
+  animation: textIn 0.5s ease;
+}
+
+.animate-text,
+span.text-out {
+  animation: textOut 0.5s ease;
+}
+
+@keyframes textIn {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes textOut {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.arrow {
+  position: absolute;
+  margin-top: 55px;
+  color: white;
+  transform: translateX(-50%);
+  left: 50%;
+  font-size: 40px;
+}
+
+.animate__animated.animate__shakeY {
+  --animate-duration: 4s;
+}
+
+.button_modal {
+  margin-bottom: 2em;
+}
+
+.intro {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  transition: 1.5s;
+}
+
+.welcome-header {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+}
+
+.letter {
+  position: relative;
+  font-family: "AlphaCentauri", sans-serif;
+
+  display: inline-block;
+  bottom: -20px;
+  margin-right: 0.8rem;
+  opacity: 0;
+  font-size: 5rem;
+}
+
+.letter.active {
+  bottom: 100px;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.letter.fade {
+  bottom: 250px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+.logoe {
+  width: 300px;
+}
+
+.animate__animated.animate__bounce {
+  --animate-duration: 6s;
+}
+
+.nav-link {
+  color: white;
+  font-style: bold;
+}
+
+.nav-item {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(8, 189, 252, 1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(2.3px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 5%;
+  margin: 4%;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .letter {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .Welcome h1 {
+    font-size: 5em;
+  }
+
+  .animate-text,
+   span {
+   line-height: 70px;   
+  }
+	
+  .cardA {
+    width: 70em;
+    height: 20em;
+  }
+
+  .about {
+    margin-top: 4em;
+  }
+
+  .navbar-toggler-icon {
+    font-size: 1.5em;
+  }
+
+  .nav-link {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .nav-item {
+    text-align: center;
+    padding: 1%;
+    margin: 10px auto;
+    font-size: 55px;
+    width: 10em;
+  }
+
+  .letter {
+    font-size: 2rem;
+  }
+  
+  .animate-text,
+   span {
+  font-size: 80px;
+   }
+
+	header h3 {
+		font-size: 3em;
+	}
+
+	.wrapper input {
+		width: 25em;
+		height: 3em;
+	}
+
+	.contact,form, input{
+		width: 30em;
+		margin: 0 auto;
+	}
+
+	.contact h1 {
+		font-size: 4em;
+		margin-bottom: 0.5em;
+	}
+
+	.button {
+		width: 5em;
+		height: 2em;
+	}
+}
